@@ -1,0 +1,428 @@
+img {
+    display: block;
+}
+
+html {
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.inner {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    color: white;
+    background-color: #175ea0;
+}
+
+header a,
+footer a {
+    cursor: pointer;
+    color: white;
+    transition: opacity 0.1s;
+}
+
+header a:hover,
+footer a:hover {
+    opacity: 0.8;
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header img {
+    filter: invert(50%) brightness(200%);
+    width: 200px;
+}
+
+header ul {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    display: flex;
+    gap: 20px;
+}
+
+footer .inner {
+    padding: 50px;
+}
+
+footer section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+}
+
+footer ul {
+    display: flex;
+    gap: 50px;
+}
+
+footer svg {
+    display: block;
+    width: 2em;
+    height: 2em;
+    opacity: inherit;
+}
+
+footer p {
+    font-size: small;
+    text-align: center;
+    margin-top: 50px;
+}
+
+main {
+    color: #152044;
+}
+
+.hero .inner {
+    padding: 20px;
+    position: relative;
+}
+
+.hero .char {
+    width: 800px;
+    margin-left: auto;
+}
+
+.hero .logo {
+    width: 600px;
+    filter: drop-shadow(5px 5px 0 white);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    margin: auto;
+}
+
+.hero .copy {
+    color: white;
+    background-color: #cc4959;
+    font-size: 4em;
+    font-weight: 900;
+    position: absolute;
+    right: 50px;
+    bottom: 300px;
+}
+
+.hero .onair {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+.hero .begin {
+    color: #175ea0;
+    font-size: 3em;
+    font-weight: 900;
+    filter: drop-shadow(5px 5px 0 white);
+}
+
+.hero .time,
+.hero .note {
+    background-color: white;
+    width: fit-content;
+}
+
+.hero .time {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.hero .movie {
+    width: 300px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    transition: transform 0.2s;
+}
+
+.hero .movie:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.hero .movie img {
+    border-radius: 10px;
+    filter: brightness(80%);
+}
+
+.hero .movie::after {
+    content: "▶️";
+    display: block;
+    color: white;
+    font-size: 4em;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+article:nth-child(even) {
+    background-color: rgba(23, 94, 160, 0.1);
+}
+
+article .inner {
+    padding: 100px 50px;
+}
+
+article h2 {
+    color: #175ea0;
+    font-weight: 900;
+    text-align: center;
+}
+
+article .en,
+article .ja {
+    display: block;
+}
+
+article .en {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 2em;
+}
+
+article .ja {
+    font-size: small;
+}
+
+article .content {
+    margin-top: 50px;
+}
+
+#news .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+#news .left {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#news li::before {
+    content: "📢";
+    font-size: large;
+    line-height: 1;
+    float: left;
+    height: 100%;
+    margin-right: 20px;
+}
+
+#news li::after {
+    clear: left;
+}
+
+#news .date,
+#news .text {
+    display: block;
+}
+
+#news .date {
+    color: #175ea0;
+    font-size: small;
+}
+
+#intro .top,
+#intro .bottom {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#intro .top {
+    align-items: flex-end;
+}
+
+#intro .bottom {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+#intro p {
+    line-height: 2;
+}
+
+#intro p::before {
+    content: "　";
+}
+
+#intro b {
+    font-size: large;
+    font-weight: bold;
+}
+
+#intro .himeru {
+    color: #e94b6c;
+}
+
+#intro .kotoha {
+    color: #028cf7;
+}
+
+#intro img {
+    width: 400px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+#intro .top img {
+    transform: rotate(-3deg);
+}
+
+#intro .top img:hover {
+    transform: rotate(-3deg) scale(1.1, 1.1);
+}
+
+#intro .bottom img {
+    transform: rotate(3deg);
+}
+
+#intro .bottom img:hover {
+    transform: rotate(3deg) scale(1.1, 1.1);
+}
+
+#char .content {
+    display: flex;
+    gap: 50px;
+}
+
+#char .left,
+#char .right {
+    width: 100%;
+    position: relative;
+}
+
+#char h3 {
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    background-color: #175ea0;
+    clip-path: polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+    padding: 20px 50px;
+    position: absolute;
+    width: 100%;
+}
+
+#char .cv {
+    color: #175ea0;
+    font-weight: 900;
+    position: absolute;
+    top: 100px;
+}
+
+#char .text {
+    line-height: 2;
+    position: absolute;
+    bottom: 100px;
+}
+
+#char img {
+    width: 300px;
+    margin-left: auto;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+#char img:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#story h3 {
+    color: white;
+    font-weight: 900;
+    background-color: #175ea0;
+    clip-path: polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#story .num,
+#story .title {
+    display: block;
+}
+
+#story .num {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 2em;
+    line-height: 0;
+}
+
+#story .title {
+    font-size: large;
+}
+
+#story .text {
+    padding: 0 80px;
+    margin-top: 50px;
+}
+
+#story p {
+    line-height: 2;
+}
+
+#story p::before {
+    content: "　";
+}
+
+#story ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+#story img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+#staff .top,
+#staff .bottom {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#staff .bottom {
+    margin-top: 50px;
+}
+
+#staff .role,
+#staff .name {
+    text-align: center;
+    display: block;
+}
+
+#staff .role {
+    color: #175ea0;
+}
+
+#staff .name {
+    font-size: large;
+}

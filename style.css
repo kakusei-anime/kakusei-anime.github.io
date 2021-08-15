@@ -426,3 +426,16 @@ article .content {
 #staff .name {
     font-size: large;
 }
+
+.fade {
+    transform: translate(0, 100px);
+    filter: blur(10px);
+    opacity: 0;
+    transition: transform 2s, filter 2s, opacity 2s; 
+}
+
+.fade-active {
+    transform: none;
+    filter: none;
+    opacity: 1;
+}

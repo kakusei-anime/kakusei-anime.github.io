@@ -89,17 +89,17 @@ main {
 }
 
 .hero .inner {
-    padding: 20px;
+    padding: 50px 0px;
     position: relative;
 }
 
 .hero .char {
-    width: 800px;
+    width: 700px;
     margin-left: auto;
 }
 
 .hero .logo {
-    width: 600px;
+    width: 700px;
     filter: drop-shadow(5px 5px 0 white);
     position: absolute;
     top: 0;
@@ -111,68 +111,36 @@ main {
 .hero .copy {
     color: white;
     background-color: #cc4959;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 900;
     position: absolute;
     right: 50px;
     bottom: 300px;
 }
 
+.hero .onair,
+.hero .movie {
+    transition: transform 0.2s;
+}
+
+.hero .onair:hover, 
+.hero .movie:hover {
+    transform: scale(1.1, 1.1);
+}
+
 .hero .onair {
+    width: 300px;
     position: absolute;
     bottom: 50px;
     left: 50px;
 }
 
-.hero .begin {
-    color: #175ea0;
-    font-size: 3em;
-    font-weight: 900;
-    filter: drop-shadow(5px 5px 0 white);
-}
-
-.hero .time,
-.hero .note {
-    background-color: white;
-    width: fit-content;
-}
-
-.hero .time {
-    font-size: 2em;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
 .hero .movie {
     width: 300px;
+    border-radius: 10px;
     position: absolute;
     right: 50px;
     bottom: 50px;
-    transition: transform 0.2s;
-}
-
-.hero .movie:hover {
-    transform: scale(1.1, 1.1);
-}
-
-.hero .movie img {
-    border-radius: 10px;
-    filter: brightness(80%);
-}
-
-.hero .movie::after {
-    content: "▶️";
-    display: block;
-    color: white;
-    font-size: 4em;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
 }
 
 article:nth-child(even) {
@@ -225,12 +193,14 @@ article .content {
     content: "📢";
     font-size: large;
     line-height: 1;
+    display: block;
     float: left;
-    height: 100%;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 #news li::after {
+    content: "";
+    display: block;
     clear: left;
 }
 
@@ -328,15 +298,10 @@ article .content {
 
 #char .cv {
     color: #175ea0;
+    font-size: large;
     font-weight: 900;
     position: absolute;
     top: 100px;
-}
-
-#char .text {
-    line-height: 2;
-    position: absolute;
-    bottom: 100px;
 }
 
 #char img {
@@ -348,6 +313,12 @@ article .content {
 
 #char img:hover {
     transform: scale(1.1, 1.1);
+}
+
+#char .text {
+    line-height: 2;
+    position: absolute;
+    bottom: 100px;
 }
 
 #story h3 {
@@ -394,6 +365,7 @@ article .content {
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding: 0 20px;
     margin-top: 50px;
 }
 
@@ -438,4 +410,140 @@ article .content {
     transform: none;
     filter: none;
     opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    header .inner {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    footer section {
+        display: block;
+    }
+
+    footer h3 {
+        text-align: center;
+    }
+
+    footer ul {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .hero .char {
+        width: 100%;
+    }
+
+    .hero .logo {
+        width: calc(100% - 100px);
+        right: 0;
+        left: 0;
+    }
+
+    .hero .copy {
+        display: none;
+    }
+
+    .hero .onair {
+        width: 30%;
+    }
+
+    .hero .movie {
+        width: 30%;
+    }
+
+    #news .content {
+        display: block;
+    }
+
+    #news .right {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #intro .top,
+    #intro .bottom {
+        display: block;
+    }
+
+    #intro img {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    #char .content {
+        display: block;
+    }
+
+    #char .left,
+    #char .right {
+        width: auto;
+        position: static;
+    }
+
+    #char .right {
+        margin-top: 50px;
+        margin-left: auto;
+    }
+
+    #char h3,
+    #char .cv,
+    #char .text {
+        position: static;
+    }
+
+    #char h3 {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #char .cv {
+        margin-top: 20px;
+    }
+
+    #char .text {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #char br {
+        display: none;
+    }
+
+    #char img {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    #story h3 {
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    #story li:nth-child(n+2) {
+        display: none;
+    }
+
+    #story img {
+        margin: 0 auto;
+    }
+
+    #story .text {
+        padding: 0 20px;
+    }
+
+    #story .swiper-button-prev,
+    #story .swiper-button-next {
+        opacity: 0.2;
+    }
+
+    #staff .bottom {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 50px;
+    }
 }

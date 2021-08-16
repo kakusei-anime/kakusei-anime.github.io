@@ -8,7 +8,7 @@ for (var i = 0; i < fadeElements.length; i++) {
 window.addEventListener("scroll", function() {
     var h = window.innerHeight;
     var y = window.pageYOffset;
-    for (var i = 0; i < fadeElementTops.length; i++) {
+    for (var i = 0; i < fadeElements.length; i++) {
         if (h * 0.9 + y > fadeElementTops[i]) {
             fadeElements[i].classList.add("fade-active");
         }

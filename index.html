@@ -24,11 +24,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script src="javascript.js" defer></script>
 </head>
@@ -155,7 +152,7 @@
                     <span class="en">STORY</span>
                     <span class="ja">おはなし！</span>
                 </h2>
-                <div class="content fade swiper-container">
+                <div class="content fade swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <h3>
@@ -206,7 +203,7 @@
                     <div class="swiper-button-next"></div>
                 </div>
                 <script>
-                    const swiper = new Swiper('.swiper-container', {
+                    const swiper = new Swiper('.swiper', {
                         loop: true,
                         navigation: {
                             nextEl: '.swiper-button-next',
